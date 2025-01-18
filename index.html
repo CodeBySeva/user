@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>ДОБАВЛЕНИЕ, ИЗМЕНЕНИЕ И УДАЛЕНИЕ ЭЛЕМЕНТА ИЗ ТАБЛИЦЫ</h2>
+
+        <form name="addUser">
+            <div class="inputs">
+                <div class="input">
+                    <span>Имя</span>
+                    <input type="text" placeholder="Bruce Reyes" name="name">
+                </div>
+                <div class="input">
+                    <span>Возраст</span>
+                    <input type="text" placeholder="24" name="age">
+                </div>
+                <div class="button">
+                    <button>Показать</button>
+                </div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Имя студента</th>
+                        <th>Год рождения</th>
+                        <th>Действия</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                </tbody>
+            </table>
+        </form>
+
+    </div>
+
+    <form name="profile" id="edit-form">
+        <div class="user-profile">
+            <div class="edit-close">x</div>
+            <div class="inputs">
+                <div class="input">
+                    <span>Имя</span>
+                    <input type="text" placeholder="Bruce Reyes" name="name" id="nameEdit">
+                </div>
+                <div class="input">
+                    <span>Возраст</span>
+                    <input type="text" placeholder="24" name="age" id="ageEdit">
+                </div>
+            </div>
+            <div class="button-edit">
+                <button id="buttonEdit">edit</button>
+            </div>
+        </div>
+    </form>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

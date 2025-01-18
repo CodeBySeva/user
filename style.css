@@ -1,0 +1,168 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+    background-color: #eee;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    /* margin: 0 auto; */
+    padding: 10px 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.inputs {
+    display: flex;
+    margin-bottom: 17px;
+    gap: 17px;
+
+    .input {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        input {
+            width: 230px;
+            height: 37px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: gray;
+            outline: none;
+
+            padding: 2px 8px;
+            font-weight: 550;
+        }
+    }
+
+    span {
+        font-weight: 570;
+        font-size: 15px;
+    }
+}
+
+.button button,
+.button-edit button {
+    width: 100px;
+    height: 37px;
+    margin-top: 27px;
+
+    background-color: rgba(0, 71, 255, 1);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+table {
+    max-width: 820px;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+td,
+th {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: start;
+
+    font-size: 15px;
+}
+
+th {
+    color: grey;
+    font-size: 15px;
+    font-weight: 550;
+}
+
+.buttonDelete,
+.buttonEdit {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    color: white;
+}
+
+.buttonDelete {
+    background-color: red;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.buttonDelete:hover {
+    background-color: #c0392b;
+}
+
+.buttonEdit {
+    background-color: rgba(0, 71, 255, 1);
+}
+
+.user-profile {
+    max-width: 100%;
+    width: 100%;
+    height: 330px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    width: 450px;
+    padding: 20px;
+
+    .inputs {
+        display: flex;
+        flex-direction: column;
+        margin-top: 45px;
+    }
+
+    .input input {
+        box-shadow: 1px 0px 15px rgba(0, 0, 0, .2);
+    }
+
+    .edit-close {
+        position: absolute;
+        top: 20px;
+        left: 90%;
+        font-weight: 700;
+        font-size: 22px;
+        color: grey;
+        cursor: pointer;
+    }
+
+}
+
+#edit-form {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
