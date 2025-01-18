@@ -57,7 +57,6 @@ form.onsubmit = (event) => {
     reloadTable()
 };
 
-const buttonEditForm = document.querySelector('#buttonEdit');
 const editForm = document.querySelector('#edit-form');
 const closeEditForm = document.querySelector('.edit-close');
 const inputNameEdit = document.querySelector('#nameEdit');
@@ -113,7 +112,9 @@ function reloadTable() {
 
 reloadTable()
 
-buttonEditForm.onclick = () => {
+editForm.onsubmit = (e) => {
+    e.preventDefault();
+
     if (currentEditUser) {
         const currentYear = new Date().getFullYear();
         const userAge = parseInt(inputAgeEdit.value);
@@ -125,10 +126,9 @@ buttonEditForm.onclick = () => {
         reloadTable()
         editForm.style.display = 'none';
         console.log(userBirthYear);
-        
-    };
-};
 
+    };
+}
 
 closeEditForm.onclick = () => {
     editForm.style.display = 'none';
